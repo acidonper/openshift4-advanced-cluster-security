@@ -61,11 +61,11 @@ scanner-7d77d75f6c-m6h84     1/1     Running   0          2m28s
 scanner-db-77dd49d98-85cnn   1/1     Running   0          2m28s
 ```
 
-CENTRAL: Central is the main component of Red Hat Advanced Cluster Security for Kubernetes and it is installed as a Kubernetes deployment. It handles data persistence, API interactions, and user interface (Portal) access. You can use the same Central instance to secure multiple OpenShift Container Platform or Kubernetes clusters.
+- CENTRAL: Central is the main component of Red Hat Advanced Cluster Security for Kubernetes and it is installed as a Kubernetes deployment. It handles data persistence, API interactions, and user interface (Portal) access. You can use the same Central instance to secure multiple OpenShift Container Platform or Kubernetes clusters.
 
-SCANNER: Red Hat Advanced Cluster Security for Kubernetes includes an image vulnerability scanning component called Scanner. It analyzes all image layers to check for known vulnerabilities from the Common Vulnerabilities and Exposures (CVEs) list. Scanner also identifies vulnerabilities in packages installed by package managers and in dependencies for multiple programming languages.
+- SCANNER: Red Hat Advanced Cluster Security for Kubernetes includes an image vulnerability scanning component called Scanner. It analyzes all image layers to check for known vulnerabilities from the Common Vulnerabilities and Exposures (CVEs) list. Scanner also identifies vulnerabilities in packages installed by package managers and in dependencies for multiple programming languages.
 
-NOTE: *For more information [RHACS Central Documentation](https://docs.openshift.com/acs/3.69/architecture/acs-architecture.html)*
+**NOTE**: *For more information [RHACS Central Documentation](https://docs.openshift.com/acs/3.69/architecture/acs-architecture.html)*
 
 #### Testing RHACS Central Component
 
@@ -125,13 +125,13 @@ collector-wq5h2                      2/2     Running   0          119s
 sensor-7579588d86-prtkz              1/1     Running   0          119s
 ```
 
-SENSOR: Red Hat Advanced Cluster Security for Kubernetes uses the Sensor component to monitor Kubernetes and OpenShift Container Platform clusters. It handles interactions with the OpenShift Container Platform or Kubernetes API server for policy detection and enforcement, and it coordinates with Collector.
+- SENSOR: Red Hat Advanced Cluster Security for Kubernetes uses the Sensor component to monitor Kubernetes and OpenShift Container Platform clusters. It handles interactions with the OpenShift Container Platform or Kubernetes API server for policy detection and enforcement, and it coordinates with Collector.
 
-ADMISSION CONTROLLER: The admission controller prevents users from creating workloads that violate security policies in Red Hat Advanced Cluster Security for Kubernetes.
+- ADMISSION CONTROLLER: The admission controller prevents users from creating workloads that violate security policies in Red Hat Advanced Cluster Security for Kubernetes.
 
-COLLECTOR: Collector collects and monitors information about container runtime and network activity. It then sends the collected information to Sensor. (*Installed in each OCP Node*)
+- COLLECTOR: Collector collects and monitors information about container runtime and network activity. It then sends the collected information to Sensor. (*Installed in each OCP Node*)
 
-NOTE: *For more information [RHACS Architecture Documentation](https://docs.openshift.com/acs/3.69/architecture/acs-architecture.html)*
+**NOTE**: *For more information [RHACS Architecture Documentation](https://docs.openshift.com/acs/3.69/architecture/acs-architecture.html)*
 
 ## Author
 
