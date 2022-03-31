@@ -43,6 +43,8 @@ NAME                                                 READY   STATUS    RESTARTS 
 rhacs-operator-controller-manager-67487c958f-xqv6b   2/2     Running   0          29m
 ```
 
+NOTE: This repository has been tested with RHACS v3.69.0 
+
 ### Install **RHACS Central Component**
 
 Once the operator is up and running, it is time to deploy the *RHACS Central Component*, named *RHACS Control Plane*, following the next steps:
@@ -132,6 +134,28 @@ sensor-7579588d86-prtkz              1/1     Running   0          119s
 - COLLECTOR: Collector collects and monitors information about container runtime and network activity. It then sends the collected information to Sensor. (*Installed in each OCP Node*)
 
 **NOTE**: *For more information [RHACS Architecture Documentation](https://docs.openshift.com/acs/3.69/architecture/acs-architecture.html)*
+
+## Test Violations Policies
+
+Once Red Hat Advanced Cluster Security for Kubernetes is deployed and the local cluster is imported as _secured cluster_ it is time to review the violations of the Openshift cluster.
+
+If the Openshift cluster is installed by default, a set of violations should appear. For example, a common violation is _OpenShift: Kubeadmin Secret Accessed_ with _High priority_:
+
+![](./images/RHACS_init_violations.png)
+
+In order to test new vulnerabilities detection, it is possible to deploy specific container images with some CVE, for example, in order to test the RHACS properly functionality. 
+
+The following commands create a test namespace and deploy an application with multiple violations regard to image CVEs, image packages not recommended, pod configuration, etc.
+
+```$bash
+oc new-project test-vulnerabilities
+
+oc run samba --labels=app=rce --image=vulnerables/cve-2017-7494 -n test
+```
+
+After few seconds, it is possible to show the respective violations in the RHACS console:
+
+![](./images/RHACS_samba_app.png)
 
 ## Author
 
