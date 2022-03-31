@@ -157,6 +157,11 @@ After few seconds, it is possible to show the respective violations in the RHACS
 
 ![](./images/RHACS_samba_app.png)
 
+## Additional Documentation
+
+The following list includes a set of topics around RHACS that may be interesting explore:
+
+- [Violations](./docs/violations.md)
 ## Author
 
 Asier Cidon (@RedHat)
