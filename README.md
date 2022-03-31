@@ -150,7 +150,7 @@ The following commands create a test namespace and deploy an application with mu
 ```$bash
 oc new-project test-vulnerabilities
 
-oc run samba --labels=app=rce --image=vulnerables/cve-2017-7494 -n test
+oc run samba --labels=app=rce --image=vulnerables/cve-2017-7494 -n test-vulnerabilities
 ```
 
 After few seconds, it is possible to show the respective violations in the RHACS console:
