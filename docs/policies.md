@@ -17,6 +17,17 @@ The default policies have preconfigured parameters and belong to categories such
 
 You can edit these categories create your own categories. Please visit [violations](./violations.md) for more examples about included policies with Red Hat Advanced Cluster Security for Kubernetes default installation.
 
+## Custom Policies
+
+In addition to using the default policies, you can also create custom policies in Red Hat Advanced Cluster Security for Kubernetes.
+
+To build a new policy, you can clone an existing policy or create a new one from scratch.
+
+- You can also create policies based on the filter criteria in the Risk view in the RHACS portal.
+- You can also use AND, OR, and NOT logical operators for policy criteria to create advanced policies.
+
+WIP
+
 ## Author
 
 Asier Cidon (@RedHat)

@@ -47,6 +47,10 @@ The following examples are included in this category:
 - Ensure That a User for the Container Has Been Created
 - Ensure that the host's network namespace is not shared
 
+### Custom
+
+It is possible to define custom policies that trigger custom violations. In this aspects, it is required to review the specific environment.
+
 ## Author
 
 Asier Cidon (@RedHat)
