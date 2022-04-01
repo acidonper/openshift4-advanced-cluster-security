@@ -1,7 +1,8 @@
 # Violations
 
-This page tries to collect important information about _violations_ in Red Hat Advanced Cluster Security for Kubernetes.
+Red Hat Advanced Cluster Security for Kubernetes built-in policies identify a variety of security findings, including vulnerabilities (CVEs), violations of DevOps best practices, high-risk build and deployment practices, and suspicious runtime behaviors. 
 
+Whether you use the default out-of-box security policies or use your own custom policies, Red Hat Advanced Cluster Security for Kubernetes reports a violation when an enabled policy fails.
 ## Categories
 
 ### DevOps Best Practices
