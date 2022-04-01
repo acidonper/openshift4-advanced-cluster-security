@@ -161,6 +161,7 @@ After few seconds, it is possible to show the respective violations in the RHACS
 
 The following list includes a set of topics around RHACS that may be interesting explore:
 
+- [Compliance](./docs/compliance.md)
 - [Violations](./docs/violations.md)
 ## Author
 
